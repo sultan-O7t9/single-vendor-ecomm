@@ -1,0 +1,136 @@
+@import "tailwindcss";
+
+:root {
+  --primary-rgb: 0 61 41;
+  --text-dark-rgb: 35 31 30;
+  --selected-outline-rgb: 58 73 128;
+}
+
+@theme inline {
+  --color-mmb-primary: rgb(var(--primary-rgb));
+  --color-mmb-text-dark: rgb(var(--text-dark-rgb));
+  --color-mmb-selected-outline: rgb(var(--selected-outline-rgb));
+  --font-inter: var(--font-inter);
+}
+
+body {
+  background-color: #ffffff;
+  color: var(--color-mmb-text-dark);
+  font-family: var(--font-inter), ui-sans-serif, system-ui;
+}
+
+.font-inter {
+  font-family: var(--font-inter), ui-sans-serif, system-ui;
+}
+
+.wrapper {
+  max-width: theme("screens.2xl");
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.px-base {
+  padding-left: theme("spacing.4");
+  padding-right: theme("spacing.4");
+}
+
+.mx-base {
+  margin-left: theme("spacing.4");
+  margin-right: theme("spacing.4");
+}
+
+@media (min-width: theme("screens.md")) {
+  .px-base {
+    padding-left: theme("spacing.5");
+    padding-right: theme("spacing.5");
+  }
+  .mx-base {
+    margin-left: theme("spacing.5");
+    margin-right: theme("spacing.5");
+  }
+}
+
+@media (min-width: theme("screens.lg")) {
+  .px-base {
+    padding-left: theme("spacing.10");
+    padding-right: theme("spacing.10");
+  }
+  .mx-base {
+    margin-left: theme("spacing.10");
+    margin-right: theme("spacing.10");
+  }
+}
+
+@media (min-width: theme("screens.xl")) {
+  .px-base {
+    padding-left: theme("spacing.20");
+    padding-right: theme("spacing.20");
+  }
+  .mx-base {
+    margin-left: theme("spacing.20");
+    margin-right: theme("spacing.20");
+  }
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-spinner::-webkit-outer-spin-button,
+.no-spinner::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.no-spinner {
+  appearance: textfield;
+  -moz-appearance: textfield;
+}
+
+.link-hover {
+  cursor: pointer;
+}
+
+.link-hover .label {
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.link-hover .label::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-mmb-primary);
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.link-hover:hover .label {
+  color: var(--color-mmb-primary);
+}
+
+.link-hover:hover .label::after {
+  transform: scaleX(1);
+}
+
+.h-section {
+  font-size: 1.4rem;
+  font-weight: 700;
+  padding-bottom: theme("spacing.10");
+}
+
+@media (min-width: theme("screens.md")) {
+  .h-section {
+    font-size: 1.7rem;
+    padding-bottom: theme("spacing.10");
+  }
+}

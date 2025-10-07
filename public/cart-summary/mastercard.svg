@@ -1,0 +1,6 @@
+<svg width="96" height="40" viewBox="0 0 96 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="96" height="40" rx="6" fill="#181818"/>
+  <circle cx="38" cy="20" r="12" fill="#EB001B"/>
+  <circle cx="58" cy="20" r="12" fill="#F79E1B" fill-opacity="0.9"/>
+  <text x="14" y="35" font-family="'Inter', 'Arial', sans-serif" font-size="10" font-weight="600" fill="white" letter-spacing="1.5">MASTERCARD</text>
+</svg>
